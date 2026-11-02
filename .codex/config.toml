@@ -1,0 +1,24 @@
+# Project-scoped Codex multi-agent config.
+# Merge manually if this file already exists; do not overwrite existing settings.
+
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 4
+default_subagent_reasoning_effort = "medium"
+interrupt_message = true
+
+[agents.architect_security]
+description = "Read-first architect and security auditor for this project."
+config_file = "./agents/architect_security.toml"
+
+[agents.developer]
+description = "Scoped implementation engineer for approved this project changes."
+config_file = "./agents/developer.toml"
+
+[agents.qa_uiux]
+description = "Independent QA and UI/UX auditor for this project."
+config_file = "./agents/qa_uiux.toml"
+
+[agents.reviewer_finalqc]
+description = "Independent code reviewer and final QC gate for this project."
+config_file = "./agents/reviewer_finalqc.toml"
